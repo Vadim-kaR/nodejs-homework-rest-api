@@ -2,8 +2,6 @@ const { Schema, model } = require("mongoose");
 const Joi = require("joi");
 const { handleSaveErrors } = require("../helpers");
 
-// const isbnRegexp = /^\d{3}-\d-\d{3}-\d{5}-\d$/;
-
 const contactSchema = new Schema(
   {
     name: {
@@ -27,12 +25,6 @@ const contactSchema = new Schema(
       ref: "user",
       required: true,
     },
-    // isbn: {
-    //   type: String,
-    //   match: isbnRegexp,
-    //   unique: true,
-    //   required: true,
-    // },
   },
   { versionKey: false, timestamps: true }
 );
@@ -44,7 +36,6 @@ const addSchema = Joi.object({
   email: Joi.string().email().required(),
   phone: Joi.string().required(),
   favorite: Joi.boolean(),
-  // isbn: Joi.string().pattern(isbnRegexp).required(),
 });
 
 const updateFavoriteSchema = Joi.object({
