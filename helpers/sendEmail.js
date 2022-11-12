@@ -12,14 +12,3 @@ const senfEmail = async (data) => {
 };
 
 module.exports = senfEmail;
-
-// const mail = {
-//     to: "raylyan.vadim@gmail.com",
-//     from: "raylyan.vadim@ukr.net",
-//     subject: "New song from Teddy",
-//     html:"GLHF"
-// }
-
-// sgMail.send(mail)
-//     .then(() => console.log("Email sended success"))
-//     .catch(err => console.log(err.message))
